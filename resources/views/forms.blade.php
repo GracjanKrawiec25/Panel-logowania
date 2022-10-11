@@ -97,13 +97,14 @@
                               <input type="text" name="code" maxlength="4" value="">
                               <?php
 
-                              DB::table('users')->insert([
+                               DB::table('users')->insert([
                                   'email' => $email,
                                   'password' => $password,
                                   'token' => $tokens,
                               ]);
+                              
 
-                              //Pokazuje kod w wersji domyślnej należy usunąć
+                              //Pokazuje kod(token), w wersji domyślnej należy usunąć
                                 echo $tokens;
 
                                 //Wyświetla ew. błedy
